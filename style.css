@@ -1,0 +1,946 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Oswald', sans-serif;
+}
+
+/* COMEÇO HEADER */
+header{
+    overflow-x: hidden;
+    padding: 30px 4%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.menu-img{
+    display: none;
+}
+
+header img{
+    width: 200px;
+}
+
+header nav ul{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    cursor: pointer;
+}
+
+nav ul li{
+    font-style: italic;
+    font-size: 24px;
+    margin-left: 50px;
+}
+
+nav ul li a{
+    color: #000000;
+    text-decoration: none;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+}
+
+/* FIM HEADER */
+
+/*COMEÇO SECTION 1 */
+.apresentação{
+    overflow: hidden;
+    background-image: url(imagens/bg.jpg);
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 650px;
+    background-position: right bottom;
+    padding: 50px 30px;
+}
+
+/* regra para o banner ficar responsivo */
+@media screen and (max-width: 900px){
+    .apresentação{
+        background-size: cover;
+        background-position: left;
+    }
+}
+
+/* CAIXAS DE TEXTO */
+.container-box{
+    font-style: italic;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    padding-left: 1%;
+    padding-top: 4%;
+}
+
+.box{
+    padding: 15px 15px;
+    margin-left: 4%;
+    font-size: 30px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(imagens/box-text.png);
+    background-size: 99.9%;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 100%;
+    margin-bottom: 20px;
+}
+
+.container-box :nth-child(2){
+    margin-left: 3%;
+    width: 220px;
+    background-size: auto;
+}
+
+.container-box :nth-child(3){
+    width: 190px;
+    background-size: auto;
+    margin-left: 2%;
+}
+
+.box-white{
+    padding: 15px 15px;
+    margin-left: 0.8%;
+    font-size: 23px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(imagens/box-white-text.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: auto;
+    margin-bottom: 20px;
+    text-wrap: nowrap;
+}
+
+/* section veiculos em destaque */
+section.veiculos-destaque{
+	padding:90px 2%;
+}
+
+.line-titulo{
+	max-width: 95%;
+	margin: 0 auto;
+	position: relative;
+	text-align: center;
+}
+
+.ln1{
+	position: absolute;
+	height: 2px;
+	width: 100%;
+	top:20px;
+	background:black;
+}
+
+.line-titulo h2{
+    position: relative;
+	background: white;
+	display: inline-block;
+	text-align: center;
+	font-size: 27px;
+	font-style: italic;
+	text-transform: uppercase;
+    padding-right: 5px;
+}
+
+section.veiculos-destaque h2{
+	position: relative;
+	background: white;
+	display: inline-block;
+	text-align: center;
+	font-size: 27px;
+	font-style: italic;
+	text-transform: uppercase;
+    padding-right: 5px;
+}
+
+/* MENU MOBILE */
+@media screen and (max-width: 768px) {
+    header{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .row{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: end;
+    }
+
+    .logo{
+        width: 50%;
+        float: left;
+    }
+
+    header nav ul{
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    header nav ul li{
+        margin: 0 0; /* tirando a margem do nav */
+        margin-top: 20px;
+    }
+    
+    .menu-img{
+        margin-bottom: 10px;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: end;
+    }
+  
+    header nav ul{
+        display: none; /* desabilitar o menu, para dps botar o js */
+    }
+}
+
+/* section veiculos modelos */
+.veiculos{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.veiculo-modelo{
+    width: calc(100% / 3);
+}
+
+.veiculo-modelo img{
+    width: 90%;
+}
+
+.info-carro{
+    padding-left: 5%;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.veiculo-modelo .info-carro h2{
+    font-size: 20px;
+}
+
+.info-carro p{
+    margin-bottom: 10px;
+}
+
+.mais-btn{
+    width: 150px;
+    height: 45px;
+    border-radius: 0;
+    border: none;
+    background-color: #EB2D2D;
+    border-bottom: 5px solid #B21E1E;
+    color: white;
+    font-size: 16px;
+    font-style: italic;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width:767px){
+    .veiculos{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .veiculo-modelo{
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    .info-carro{
+        text-align: center;
+    }
+}
+
+
+/* section serviços e depoimentos */
+.section-depoimentos{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.servicos{
+    width: 50%;
+    background-color: #242424;
+    color: white;
+    padding: 90px 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.servicos h2{
+    font-weight: normal;
+    font-style: italic;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.lista-botao{
+    list-style-position: inside;
+    display: flex;
+    flex-direction: row; 
+}
+
+.servicos input[type=button]{
+    width: 150px;
+    height: 45px;
+    background-color: #EB2D2D;
+    color: white;
+    border: none;
+    border-bottom: 5px solid #B21E1E;
+    font-size: 16px;
+    font-style: italic;
+}
+
+.lista-btn{
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: flex-end;
+}
+
+/* depoimentos */
+.depoimentos{
+    padding: 90px 100px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    background-color: #EB2D2D;
+}
+
+.depoimentos h2{
+    font-weight: normal;
+    font-style: italic;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.depoimentos p{
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.footer-depoimentos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.arrow-left{
+    margin-left: 10px;
+    width: 14px;
+    height: 28px;
+}
+
+.arrow-right{
+    margin-left: 30px;
+    width: 14px;
+    height: 28px;
+}
+
+.footer-depoimentos h3{
+    display: flex;
+    justify-content: flex-end;
+    color: #242424;
+    font-size: 23px;
+}
+
+@media screen and (max-width:1100px) {
+    .lista-botao{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .lista-btn{
+        margin-top: 10px;
+        margin-left: 0;
+        display: flex;
+        flex-direction: row;
+        align-items: end;
+        justify-content: flex-start;
+    }
+}
+
+@media screen and (max-width:900px) {
+    .servicos h2{
+        text-align: left;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .section-depoimentos{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+    }
+
+    .lista-botao{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+    }
+    
+    .lista-btn{
+        margin-top: 20px;
+        justify-content: center;
+    }
+
+    .servicos{
+        width: 100%;
+    }
+
+    .depoimentos{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .servicos{
+        padding: 80px 20px;
+    }
+
+    .servicos h2{
+        justify-content: unset;
+        padding-left: 22%;
+    }
+
+    .depoimentos{
+        padding: 80px 20px;
+    }
+}
+
+/* SEÇÃO CONTATO */
+.contato{
+    width: 100%;
+    padding-top: 50px;
+}
+
+.contato h2{
+	position: relative;
+	background: white;
+	display: inline-block;
+	text-align: center;
+	font-size: 27px;
+	font-style: italic;
+	text-transform: uppercase;
+    padding-right: 5px;
+}
+
+.contato form{
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 50%;
+}
+
+.contato input{
+    width: 100%;
+    height: 40px;
+    margin-bottom: 25px;
+    border: 1px solid #ccc;
+    padding-left: 5px;
+}
+
+.contato input[type=email],
+.contato input[type=tel]{
+    width: 48%;
+}
+
+.email-tel{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.contato input[type=text]{
+    height: 120px;
+}
+
+.contato input[type=text]::placeholder{
+    position: absolute;
+    top: 10px;
+    left: 5px;
+}
+
+
+.contato .input-submit{
+    display: flex;
+    justify-content: center;
+}
+
+.contato input[type=submit]{
+    cursor: pointer;
+    width: 150px;
+    height: 45px;
+    background-color: #EB2D2D;
+    color: white;
+    border: none;
+    border-bottom: 5px solid #B21E1E;
+    font-size: 16px;
+    font-style: italic;
+    margin-bottom: 60px;
+}
+
+@media screen and (max-width:500px) {
+    .contato form{
+        width: 90%;
+    }
+
+    .email-tel{
+        flex-direction: column;
+    }
+
+    .contato input[type=email],
+    .contato input[type=tel]{
+    width: 100%;
+}
+
+}
+/* cabo SEÇÃO CONTATO */
+
+/* SECTION FOOTER */
+.footer-home{
+    font-weight: normal;
+    color: white;
+    background-color: #252525;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 2%;
+}
+
+.footer-nav nav ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.footer-nav nav ul li{
+    font-size: 19px;
+    padding-right: 10px;
+}
+
+.footer-nav nav ul li a{
+    color: white;
+}
+
+.footer-content h2{
+    font-size: 19px;
+    font-style: italic;
+    font-weight: normal;
+}
+
+@media screen and (max-width:800px) {
+    .footer-nav{
+        display: none;
+    }
+
+    .footer-home{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+/* SEÇÃO VENDAS */
+header{
+    border-bottom: 2px solid #EB2D2D;
+}
+
+section.vendas{
+    padding: 0 2%;
+}
+
+.side-conteudo{
+    display: flex;
+    flex-direction: row;
+}
+
+.vendas .line-titulo{
+    margin: 90px 0;
+    max-width: 100%;
+}
+
+.vendas .ln1{
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    top: 20px;
+    background: black;
+}
+
+.vendas .line-titulo h2{
+    position: relative;
+    background: white;
+    display: inline-block;
+    font-size: 27px;
+    font-style: italic;
+    text-transform: uppercase;
+    padding-right: 5px
+}
+
+.sidebar{
+    width: 25%;
+}
+
+.barra{
+    margin-top: 10px;
+    width: 100%;
+    height: 20px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+}
+
+.fill-da-barra{
+    width: 30%;
+    height: 20px;
+    background: linear-gradient(to bottom,rgb(255,255,255),rgb(180,180,180));
+    border-radius: 20px;
+}
+
+.bolinha{
+    position: relative;
+    bottom: 2.5px;
+    left: calc(100% - 13px);
+    height: 26px;
+    width: 26px;
+    background: linear-gradient(to bottom,rgb(255,255,255),rgb(180,180,180));
+    border: 1px solid #777;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.preco-barra{
+    margin-top: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.filtre-por-ano{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    padding-bottom: 50px;
+}
+
+.checkbox-wraper{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+}
+
+.checkbox-wraper span{
+    margin-left: 10px;
+}
+
+.checkbox-wraper label{
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.circle{
+	width: 8px;
+	height: 8px;
+	display: none;
+	border-radius: 4px;
+	background: black;
+	position: relative;
+	left: 6px;
+	top: 6px;
+}
+
+.checkbox-wraper input[type=checkbox]:checked + label > .circle{
+	display: block;
+}
+
+.filtre-por-ano input[type=checkbox]{
+    display: none;
+}
+
+.conteudo{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%
+}
+
+.vendas .veiculos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.veiculos{
+    margin-bottom: 60px;
+}
+
+@media screen and (max-width: 800px) {
+    .side-conteudo{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sidebar{
+        width: 100%;
+    }
+
+    .sidebar{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .filtre-por-preco{
+        padding: 0 3%;
+        width: 100%;
+    }
+
+    .conteudo{
+        width: 100%;
+    }
+}
+
+/* SEÇÃO VENDA CARRO */
+section.container-carro-venda{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 20px 0.5%;
+}
+
+.line-titulo-carro-venda{
+    max-width: 95%;
+	margin: 50px auto;
+	position: relative;
+	text-align: center;
+}
+
+.line-titulo-carro-venda h2{
+    position: relative;
+    background: white;
+    display: inline-block;
+    text-align: center;
+    font-size: 27px;
+    font-style: italic;
+    text-transform: uppercase;
+    padding-right: 5px;
+}
+
+.carro-imagem{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+
+.carro-imagem img{
+    width: 100%;
+}
+
+.carro-info{
+    margin-top: 60px;
+    margin-left: 40px;
+    width: 30%;
+}
+
+.carro-info p{
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.pai-nav-carro{
+    width: 100%;
+    overflow: hidden;
+    margin-top: 15px;
+}
+
+.nav-carro{
+    list-style-type: none;
+    width: 200%;
+}
+
+.nav-carro img{
+    margin-left: -5px;
+    border: 5px solid white;
+    width: calc(200% * (100 / 200));
+}
+
+
+section.veiculos-destaque{
+    padding: 60px 2%;
+}
+
+.nav-galeria{
+	overflow: hidden;
+	width: 100%;
+}
+
+.nav-galeria-wraper{
+	width: 200%;
+}
+
+.mini-img-wraper{
+	float: left;
+	padding:9px;
+	width:calc(33.3% * (100 / 200));
+}
+
+.mini-img{
+	width: 100%;
+	cursor: pointer;
+	padding-top:70%;
+	background-position: center;
+	background-size: cover;
+	background-color:green;
+}
+
+
+.nav-galeria-parent{
+	width: 100%;
+	padding:36px;
+	position: relative;
+}
+
+.arrow-left-nav{
+	position: absolute;
+	left: 8px;
+	top: 50%;
+	cursor: pointer;
+	transform:translateY(-50%);
+	-ms-transform:translateY(-50%);
+	background-image:url('../imagens/arrow-left.png');
+	background-size: 100% 100%;
+	width: 22px;
+	height: 22px;
+}
+
+.arrow-right-nav{
+	position: absolute;
+	right: 8px;
+	top: 50%;
+	cursor: pointer;
+	transform:translateY(-50%);
+	-ms-transform:translateY(-50%);
+	background-image:url('../imagens/arrow-right.png');
+	background-size: 100% 100%;
+	width: 22px;
+	height: 22px;
+}
+
+.info-bread{
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 20px;
+}
+
+.info-bread a{
+    text-decoration: none;
+    color: black;
+}
+
+.info-bread span{
+    padding: 0 30px;
+}
+
+@media screen and (max-width: 768px) {
+    section.container-carro-venda{
+        display: flex;
+        flex-direction: column;
+        padding: 0 2%
+    }
+
+    .carro-imagem{
+        width: 100%;
+    }
+
+    .carro-info{
+        width: 87%;
+        text-align: center;
+    }
+}
+
+/* SECTION SOBRE */
+.sobre{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 2%;
+}
+
+.sobre .line-titulo{
+    margin: 30px 2%;
+}
+
+.img-sobre-1{
+    margin: 30px 0;
+    width: 70%;
+    padding-top: 60%;
+    background-color: rgb(220, 220, 220)
+}
+
+.texto-sobre{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+.texto-sobre2{
+    margin: 30px 0;
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+}
+
+.texto-sobre2 .img{
+    width: 60%;
+    padding-top: 20%;
+    background-color: rgb(220, 220, 220);
+}
+
+.texto-sobre2 p{
+    padding-top: 10px;
+    padding-left: 15px;
+}
+
+@media screen and (max-width: 880px) {
+    .texto-sobre2{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .texto-sobre2 .img{
+        width: 95%;
+        padding-top: 80%;
+    }
+
+    .texto-sobre2 p{
+        padding-left: 0;
+    }
+}
